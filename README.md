@@ -12,7 +12,7 @@ For development, it can _emulate_ an IdP (via [mrclay/shibalike][13]).
 
 Use [composer][1] to require the latest release into your project:
 
-    composer require uabookstores/laravel-shibboleth
+    composer require uisits/laravel-shibboleth
 
 If you're running Laravel >= 5.5, then you can skip this step, otherwise you
 will need to manually register the service provider in your `config/app.php`
