@@ -1,0 +1,31 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect Trailing Slashes...
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+<IfModule mod_shib_22.so>
+    AuthType shibboleth
+    Require shibboleth
+    ShibUseHeaders On
+    ShibRequireSession Off
+    ShibRequestSetting isPassive Off
+</IfModule>
+
+<IfModule mod_shib_24.so>
+    AuthType shibboleth
+    Require shibboleth
+    ShibUseHeaders On
+    ShibRequireSession Off
+    ShibRequestSetting isPassive Off
+</IfModule>
