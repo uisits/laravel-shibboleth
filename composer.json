@@ -1,0 +1,39 @@
+{
+  "name": "uisits/laravel-shibboleth",
+  "description": "Enable basic Shibboleth support for Laravel 6.x",
+  "authors": [
+    {
+      "name": "Chinwal Prasad",
+      "email": "pchin3@uis.edu"
+    }
+  ],
+  "require": {
+    "illuminate/support": "5.* || ^6.0",
+    "mrclay/shibalike": "1.0.0",
+    "laravel/framework": "^5.4 || ^6.0",
+    "tymon/jwt-auth": "1.0.x-dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "StudentAffairsUwm\\Shibboleth\\": "src/StudentAffairsUwm/Shibboleth"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "StudentAffairsUwm\\Shibboleth\\Tests\\Stubs\\": "tests/setup/Stubs",
+      "App\\": "tests/setup/app"
+    }
+  },
+  "minimum-stability": "stable",
+  "require-dev": {
+    "phpunit/phpunit": "^6.0",
+    "orchestra/testbench": "3.4.*"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "StudentAffairsUwm\\Shibboleth\\ShibbolethServiceProvider"
+      ]
+    }
+  }
+}
